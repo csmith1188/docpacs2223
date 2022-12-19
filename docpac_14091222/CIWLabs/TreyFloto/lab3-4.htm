@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Lab 3-4</title>
+
+<script type="text/javascript">
+<!--
+
+//Anonymous function
+var fn1 = function() { return "This is an anynymous function."; };
+document.write(fn1() + "<br />");
+
+//Prototype function
+function Pen (penColor) {
+this.penColor = penColor;
+}
+Pen.prototype.display = function () {
+document.write(this.penColor  + "<br />");
+}
+var lux = new Pen ("Blue");
+lux.display (); 
+
+//Closure function
+function display (Name) {
+var desig = "Your name is ";
+fullName= function makeDesig () {       
+return desig + Name;
+}
+return fullName();}
+document.write(display('Alex')  + "<br />");
+
+//Arrow function
+var a= (p, q) =>  p+q;
+document.write(a(10, 20) + "<br />");
+
+//Spread operator
+var x = [1, 2, 3];
+function sample (ar1, ar2, ar3) { return (ar1 + "-" + ar2 + "-" + ar3)};
+document.write(sample (7, ...x, 9));
+
+// -->
+</script>
+
+</head>
+
+<body>
+
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+
+</body>
+</html>

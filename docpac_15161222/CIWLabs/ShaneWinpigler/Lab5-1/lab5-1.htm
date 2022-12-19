@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 5-1</title>
+
+<script type="text/Javascript">
+<!--
+
+/************************************************
+  The checkGrade() function tests a numerical
+  value and returns a corresponding letter grade.
+************************************************/
+  
+function checkGrade(form) {
+  var myGrade = form.myselect.options[form.myselect.selectedIndex].text; 
+ 
+/*****************************************************
+  Create an if statement. As the condition for the if
+  statement, test the myGrade variable for a value of 
+  91 or greater. If the value is greater than or equal
+  to 91, output an alert that informs the user that 
+  their grade is an A.
+*****************************************************/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+}//End checkGrade() function
+ 
+
+//-->
+</script>
+</head>
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<form name="myform" id="myform">Select numerical grade value:
+<select name="myselect">
+<option>100</option>
+<option>99</option>
+<option>98</option>
+<option>97</option>
+<option>96</option>
+<option>95</option>
+<option>94</option>
+<option>93</option>
+<option>92</option>
+<option>91</option>
+<option>90</option>
+<option>89</option>
+<option>88</option>
+<option>87</option>
+<option>86</option>
+<option>85</option>
+<option>84</option>
+<option>83</option>
+<option>82</option>
+<option>81</option>
+<option>80</option>
+</select>
+<p>
+<input type="button" value="Check Grade" onclick=
+"checkGrade(this.form);" />
+</p>
+</form>
+</body>
+</html>

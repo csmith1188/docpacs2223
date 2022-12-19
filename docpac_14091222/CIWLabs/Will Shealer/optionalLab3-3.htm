@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Optional Lab 3-3: Functions, Arguments and Return Values</title>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+    
+/******************************************************************
+  The addNumbers() function recieves two values. A variable named
+  result is assigned the result of adding the two values together. 
+  The result variable is returned to the calling statement.
+******************************************************************/
+
+    function addNumbers (arg1, arg2) {
+    var result = arg1 + arg2;
+    return result;
+  }
+
+//-->
+</script>
+</head>
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<script language="JavaScript" type="text/javascript">
+<!--
+
+/**************************************************************
+  Use the parseFloat() function to convert the users input to
+  numerical values. Determine two places in the code where the 
+  parseFloat() function can be used to perform this task.
+**************************************************************/
+
+    alert("Please enter a numerical value in each of the following prompt dialog boxes. \nThe two numbers will be added together.");
+  
+    var num1 = prompt("Please enter a numerical value.","");
+    var num2 = prompt("Please enter a numerical value.","");
+  
+    document.write("<p>The result of the addNumbers() function is: <strong>" + addNumbers(num1, num2) + "</strong></p>");
+
+//-->
+</script>
+</body>
+</html>

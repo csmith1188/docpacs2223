@@ -1,0 +1,14 @@
+{
+  "name": "npm01-shanewinpigler",
+  "version": "1.0.0",
+  "description": "nocti prep",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shane Winpigler",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
