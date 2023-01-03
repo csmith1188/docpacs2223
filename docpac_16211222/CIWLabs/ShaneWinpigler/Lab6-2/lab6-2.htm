@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Lab 6-2</title>
+
+<script type="text/Javascript">
+<!--
+
+/******************************************************
+
+Create a variable named myWindow. Assign to myWindow 
+the result of the open() method of the window object. 
+Insert an empty set of quotation marks in the URL's 
+place. Give the window a name. Assign only a height 
+of 100 and a width of 100.
+Use the smallWindow() function to add content to the 
+new window using document.write(). Create <form> tags. 
+Use an <input> tag to create a button object. Set the 
+button's value attribute equal to Close. Add an onClick 
+event handler to call the window.close() method.
+
+******************************************************/
+  
+function smallWindow() {
+    var myWindow = open("", 100, 100)
+    myWindow.document.open()
+    myWindow.document.write("<form type=`button` value=`Close small window` onclick=`window.close`></form>")
+    
+}
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+<form name="myForm">
+<input type="button" value="Open New Window" onClick="smallWindow();" />
+</form>
+
+</body>
+</html>

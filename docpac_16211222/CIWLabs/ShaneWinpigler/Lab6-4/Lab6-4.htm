@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 6-4</title>
+
+<script type="text/javascript">
+
+    function writeToDocument() {
+		var textColor, backColor, pageTitle;
+        var yourText, pageContent, docWindow;
+		
+		textColor = prompt("Please enter a text color:", "white");
+        backColor = prompt("Please enter a background color:", "black");
+        pageTitle = prompt("The page will be titled: ", "Default Title");
+        yourText = prompt("Add content to the new document:", "page content");
+		
+		pageContent = "<html><head><title>";
+        pageContent += pageTitle;
+        pageContent += "</title>";
+        pageContent += "<script>";
+        pageContent += "alert('The page ' + document.title + ' was created: ' + document.lastModified)";
+        pageContent += "<" + "/script>";
+        pageContent += "</head><body " + "bgcolor=" + backColor + "><strong>" + "<font color= " + textColor + ">" + yourText + "</strong></body></html>";
+		
+		docWindow = open("", "docWin", "width=250,height=150,resizable=1,status=1");
+		
+		// Write your code here
+        with (docWindow.document) {
+            bgColor = backColor
+            fgColor = textColor
+            write(pageContent)
+        }
+	}
+	
+</script>
+</head>
+
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+<form name="myForm" id="myForm">
+<input type="button" value="Write To Remote Document" onclick="writeToDocument();" />
+</form>
+
+</body>
+</html>
