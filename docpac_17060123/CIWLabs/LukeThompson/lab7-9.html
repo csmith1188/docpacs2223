@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Lab 7-8</title>
+</head>
+
+<body onload="quotes()">
+
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+<script type="text/javascript">
+    // Make sure these quotes don't wrap in your file
+
+    function quotes(){
+    var randomnumber=Math.floor(Math.random()*10);
+
+     var quotes = new Array()
+
+     quotes[0] = "Every time history repeats itself the price goes up.<br /><small><em>- Anonymous</em></small>"
+     quotes[1] = "The moment you think you understand a great work of art, it's dead for you.<br /><small><em>- Robert Wilson</small></em>"
+     quotes[2] = "To love one person with a private love is poor and miserable; to love all is glorious.<br /><small><em>- Thomas Traherne</small></em>"
+     quotes[3] = "Every violation of truth is not only a sort of suicide in the liar, but is a stab at the health of human society.<br /><small><em>- Ralph Waldo Emerson</em></small>"
+     quotes[4] = "Man is to be found in reason, God in the passions.<br /><small><em>- G. C. Lichtenberg</em></small>"
+     quotes[5] = "Great innovations should not be forced on slender majorities.<br /><small><em>- Thomas Jefferson</em></small>"
+     quotes[6] = "In this world nothing can be said to be certain, except death and taxes.<br /><small><em>- Benjamin Franklin</em></small>"
+     quotes[7] = "Nine-tenths of wisdom consists in being wise in time.<br /><small><em>- Theodore Roosevelt</em></small>"
+     quotes[8] = "We have no more right to consume happiness without producing it than to consume wealth without producing it.<br /><small><em>- George Bernard Shaw</em></small>"
+     quotes[9] = "So little done, so much to do.<br /><small><em>- Cecil Rhodes< /em></small>"
+     document.write("<h3>CIW JavaScript Specialist</h3>");
+     document.write("<hr />");
+    document.write(quotes[randomnumber]);
+    }
+
+    // Use Math object
+
+    // -->:
+</script>
+</body>
+</html>

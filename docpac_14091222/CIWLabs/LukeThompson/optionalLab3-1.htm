@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Optional Lab 3-1: JavaScript Functions</title>
+
+<script type="text/javascript">
+<!--
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+// set the radio button with the given value as being checked
+// do nothing if there are no radio buttons
+// if the given value does not exist, all the radio buttons
+// are reset to unchecked
+function setCheckedValue(radioObj, newValue) {
+	if(!radioObj)
+		return;
+	var radioLength = radioObj.length;
+	if(radioLength == undefined) {
+		radioObj.checked = (radioObj.value == newValue.toString());
+		return;
+	}
+	for(var i = 0; i < radioLength; i++) {
+		radioObj[i].checked = false;
+		if(radioObj[i].value == newValue.toString()) {
+			radioObj[i].checked = true;
+		}
+	}
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+label { background-color: #FDFDF0; color: black; border: 2px outset #8B8378; padding: 0.1em 2ex 0.1em 0.5ex; line-height: 1.6em; }
+//-->
+</style>
+</head>
+
+<h2>CIW JavaScript Specialist</h2>
+<h3>JavaScript Get or Set Checked Radio Value</h3>
+
+
+<form name="radioExampleForm" method="get" action="" onsubmit="return false;">
+<p>
+<label for="number0">
+<input type="radio" value="0" name="number" id="number0" /> Zero</label>
+&nbsp;<label for="number1">
+<input type="radio" value="1" name="number" id="number1" /> One</label>
+&nbsp;<label for="number2">
+<input type="radio" value="2" name="number" id="number2" /> Two</label>
+&nbsp;<label for="number3">
+<input type="radio" value="3" name="number" id="number3" /> Three</label>
+&nbsp;<label for="number4">
+<input type="radio" value="4" name="number" id="number4" /> Four</label>
+</p>
+<p>
+<input type="button" onclick="alert('Checked value is: '+getCheckedValue(document.forms['radioExampleForm'].elements['number']));" value="Show Checked Value" />
+&nbsp;<input type="button" onclick="setCheckedValue(document.forms['radioExampleForm'].elements['number'], '2');" value="Set Checked to Two" />
+&nbsp;<input type="button" onclick="setCheckedValue(document.forms['radioExampleForm'].elements['number'], '4');" value="Set Checked to Four" />
+&nbsp;<input type="button" onclick="setCheckedValue(document.forms['radioExampleForm'].elements['number'], '');" value="Uncheck All" />
+</p>
+</form>
+</body>
+</html>

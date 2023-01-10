@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Lab 6-5</title>
+
+	<script type="text/Javascript">
+    var imagename = "";
+
+/**************************************************************
+	  Add image preloading code below
+	  name the image objects as follows:
+	  ciw_on, ciw_off, 
+	  ciw1_on, ciw1_off, 
+
+	  The src properties will be assigned values as follows: 
+	  images/ciw_on.gif, images/ciw_off.gif, 
+	  images/ciw1_on.gif, images/ciw1_off.gif 
+**************************************************************/
+	
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	function imageOn(imageName){
+      if (document.images){
+        (imageName=="ciw") ? document.images[0].src
+        = ciw_on.src : "";
+        (imageName=="ciw1") ? document.images[1].src
+        = ciw1_on.src : "";
+      }
+    }
+
+    function imageOff(imageName){
+      if (document.images){
+        (imageName=="ciw") ? document.images[0].src
+        = ciw_off.src : "";
+        (imageName=="ciw1") ? document.images[1].src
+        = ciw1_off.src : "";
+      }
+    }
+//-->
+</script>
+
+</head>
+
+<body>
+
+	<h3>CIW JavaScript Specialist</h3>
+	<hr />
+
+	<a href="http://www.ciwcertified.com" onMouseOver="imageOn('ciw');status='Visit CIW Certified';return true;"
+		onMouseOut="imageOff('ciw');status='';return true;">
+		<img src="images/ciw_off.gif" name="ciw" border="0" width="100" height="52" /></a>
+
+	<p>
+
+		<a href="http://www.ciwcertified.com/locator/introLocator.asp"
+			onMouseOver="imageOn('ciw1');status='Visit the CIW training locator';return true;"
+			onMouseOut="imageOff('ciw1');status='';return true;">
+			<img src="images/ciw1_off.gif" name="ciw1" border="0" width="100" height="52" /></a>
+	</p>
+
+</body>
+
+</html>
